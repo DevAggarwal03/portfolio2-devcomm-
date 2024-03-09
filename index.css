@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100vh;
+    width: 100vw;
+}
+.megaCanvas{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #BABDBF;
+    border: 10px solid #262626;
+    backdrop-filter: blur(2px);
+    box-shadow: 2px 2px 2px #484848 inset;
+}
+.container{
+    height: 95%;
+    width: 95%;
+    background-color: #262626;
+    border: 7px solid #262626;
+    box-shadow: 2px 2px 4px #262626;
+    background: radial-gradient();
+    background-image: url(./icons/background\ test.svg);
+    background-repeat: no-repeat;
+    background-size: 95% 90%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.container header{
+    position: relative;
+}
+.container #navbar{
+    display: flex;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    justify-content: space-between;
+    overflow: hidden;
+    background-color: #A1A4A6;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.container #navbar .logo{
+    align-self: flex-start;
+    margin-left: 5%;
+}
+#portfolio{
+    font-size: 2.1em;
+    letter-spacing: 0.04cm;
+    font-family: "DM Serif Display", sans-serif;
+    color: #F2F2F2;
+    font-weight: bold;
+}
+#portfolio span{
+    color: #262626;
+}
+.fadeIn{
+    animation: fadeIn 0.5s ease-in-out;
+}
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+        right: -20px;
+    }
+    100%{
+        opacity: 1;
+        right: 0;
+    }
+}
+.hamburger{
+    padding: 3px 0;
+    align-self: center;
+    margin-right: 5%;
+    align-self: center;
+}
+.hamburger:hover{
+    opacity: 0.5;
+}
+#menu{
+    position: absolute;
+    right: 0%;
+    align-items: center;
+    padding: 13px 7px;
+    border-radius: 20px;
+    background-color: #BABDBF;
+    width: 15%;
+}
+#menu li{
+    padding: 10px 0;
+    padding-left: 16px;
+    margin-right: 5%;
+    list-style: none;
+    font-size: 1.7em;
+    text-decoration: none;
+}
+@media screen and (width <= 1167px){
+    #menu{
+        padding: 6px 0;
+        width: 120px;
+    }
+    #menu li{
+        padding: 6px 0;
+        padding-left: 10px;
+        font-size: 1.3em;
+    }
+}
+#home{
+    color: #262626;
+}
+#projects{
+    text-decoration: none;
+    color: #262626;
+}
+#contactMe{
+    text-decoration: none;
+    color: #262626;
+}
+.hidden{
+    display: none;
+}
+.show{
+    display: inline;
+}
+#content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+}
+.wrapperContent{
+    display: flex;
+    width: 70%;
+    height: 60%;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+}
+.text{
+    /* flex: 1; */
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+#name{
+    font-size: 2.5em;
+    font-family: "DM Serif Display", sans-serif;
+    width: 60%;
+    margin:auto;
+    margin-left: 0;
+    margin-right: 0;
+}
+.discription{
+    font-size: 1.3em;
+    opacity: 0.6;
+}
+    @media (max-width: 1218px){
+        .wrapperContent{
+            width: 90%;
+            height: 90%;
+            flex-direction: column;
+        }
+        .text{
+            width: 100%;
+        }
+        #name{
+            font-size: 1.6em;
+            margin: 0 0;
+        }
+        .discription{
+            font-size: 1em;
+        }
+        #myPic{
+            /* align-self: center; */
+            width: 250px;
+            height: 280px;
+        }
+    }
+.discription span{
+    font-weight: bold;
+}
+.links{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+}
+#Twitter{
+    text-decoration: none;
+    border: 2px solid #A1A4A6;
+    color: #A1A4A6;
+    padding: 7px 14px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: all 0.5s ease-in-out;
+}
+#LinkedIn{
+    border-radius: 5px;
+    text-decoration: none;
+    border: 2px solid #A1A4A6;
+    color: #A1A4A6;
+    padding: 7px 14px;
+    font-size: 1.2em;
+    transition: all 0.5s ease-in-out;
+}
+#Twitter:hover{
+    background-color: #A1A4A6;
+    color: #262626;
+}
+#LinkedIn:hover{
+    background-color: #A1A4A6;
+    color: #262626;
+}
+.photo{
+    /* flex: 2; */
+    justify-self: center;
+    align-self: center;
+    /* display: flex; */
+}
+#myPic{
+    align-items: center;
+    height: 350px;
+    border-radius: 50%;
+}
