@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100vh;
+    width: 100vw;
+}
+.megaCanvas{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #BABDBF;
+    border: 10px solid #262626;
+    backdrop-filter: blur(2px);
+    box-shadow: 2px 2px 2px #484848 inset;
+}
+.container{
+    height: 95%;
+    width: 95%;
+    background-color: #262626;
+    border: 7px solid #262626;
+    box-shadow: 2px 2px 4px #262626;
+    background: radial-gradient();
+    background-image: url(./icons/background\ test.svg);
+    background-repeat: no-repeat;
+    background-size: 95% 90%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.container header{
+    position: relative;
+}
+.container #navbar{
+    display: flex;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    justify-content: space-between;
+    overflow: hidden;
+    background-color: #A1A4A6;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.container #navbar .logo{
+    align-self: flex-start;
+    margin-left: 5%;
+}
+#portfolio{
+    font-size: 2.1em;
+    letter-spacing: 0.04cm;
+    font-family: "DM Serif Display", sans-serif;
+    color: #F2F2F2;
+    font-weight: bold;
+}
+#portfolio span{
+    color: #262626;
+}
+.fadeIn{
+    animation: fadeIn 0.5s ease-in-out;
+}
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+        right: -20px;
+    }
+    100%{
+        opacity: 1;
+        right: 0;
+    }
+}
+.hamburger{
+    padding: 3px 0;
+    align-self: center;
+    margin-right: 5%;
+    align-self: center;
+}
+.hamburger:hover{
+    opacity: 0.5;
+}
+#menu{
+    position: absolute;
+    right: 0%;
+    align-items: center;
+    padding: 13px 7px;
+    border-radius: 20px;
+    background-color: #BABDBF;
+    width: 15%;
+}
+#menu li{
+    padding: 10px 0;
+    padding-left: 16px;
+    margin-right: 5%;
+    list-style: none;
+    font-size: 1.7em;
+    text-decoration: none;
+}
+@media screen and (width <= 1167px){
+    #menu{
+        padding: 6px 0;
+        width: 120px;
+    }
+    #menu li{
+        padding: 6px 0;
+        padding-left: 10px;
+        font-size: 1.3em;
+    }
+}
+#home{
+    color: #262626;
+    text-decoration: none;
+}
+#projects{
+    color: #262626;
+}
+#contactMe{
+    text-decoration: none;
+    color: #262626;
+}
+.hidden{
+    display: none;
+}
+.show{
+    display: inline;
+}
+.cards{
+    /* border: 5px solid red; */
+    height: 90%;
+    margin-top: 1%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    overflow-y:scroll;
+    gap: 20px 0px;
+    padding: 15px 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+@media (max-width: 1391px) {
+    .cards{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+}
+@media (max-width: 934px) {
+    .cards{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+}
+.card{
+    width: 400px;
+    height: 500px;
+    display: inline-block;
+    justify-self: center;
+    align-self: center;
+    color: white;
+    text-align: center;
+    border: 5px solid #A1A4A6;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+.card .ProImage{
+    width: 500px;
+    height: 290px;
+}
+.bodyPro{
+    display: flex;
+    flex-direction: column;
+    height: 180px;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+.heading{
+    color: rgba(207, 207, 207, 0.657);
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: "DM Serif Display", sans-serif;
+}
+.links{
+    display: flex;
+    width: 200px;
+    justify-content: space-evenly;
+}
+.links img{
+    width: 30px;
+    margin-bottom: 30px;
+}
+@media (max-width: 481px) {
+    .card{
+        width: 280px;
+        height: 380px;
+    }
+    .card .ProImage{
+        width: 380px;
+        height: 170px;
+    }
+}
