@@ -48,8 +48,9 @@ html, body{
     align-self: flex-start;
     margin-left: 5%;
 }
-#portfolio{
-    font-size: 2.1em;
+#portfolio a{
+    text-decoration: none;
+    font-size: 1.1em;
     letter-spacing: 0.04cm;
     font-family: "DM Serif Display", sans-serif;
     color: #F2F2F2;
@@ -133,98 +134,79 @@ html, body{
 }
 .wrapperContent{
     display: flex;
-    width: 70%;
-    height: 60%;
-    justify-content: space-between;
-    /* flex-wrap: wrap; */
+    width: 80%;
+    height: 90%;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    align-items: center;
 }
 .text{
-    /* flex: 1; */
-    width: 60%;
+    width: 560px;
+    height: 440px;
+    justify-content: space-between;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
 }
 #name{
-    font-size: 2.5em;
+    font-size: 4em;
     font-family: "DM Serif Display", sans-serif;
-    width: 60%;
-    margin:auto;
-    margin-left: 0;
-    margin-right: 0;
+    /* margin-bottom: 20px; */
 }
-.discription{
+.text .discription{
     font-size: 1.3em;
-    opacity: 0.6;
-}
-    @media (max-width: 1218px){
-        .wrapperContent{
-            width: 90%;
-            height: 90%;
-            flex-direction: column;
-        }
-        .text{
-            width: 100%;
-        }
-        #name{
-            font-size: 1.6em;
-            margin: 0 0;
-        }
-        .discription{
-            font-size: 1em;
-        }
-        #myPic{
-            /* align-self: center; */
-            width: 250px;
-            height: 280px;
-        }
-    }
-.discription span{
-    font-weight: bold;
 }
 .links{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    height: 10%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    width: 200px;
+    width: 300px;
 }
-#Twitter{
-    text-decoration: none;
+.links a{
     border: 2px solid #A1A4A6;
-    color: #A1A4A6;
-    padding: 7px 14px;
-    border-radius: 5px;
+    padding: 5px 10px;
     font-size: 1.2em;
-    transition: all 0.5s ease-in-out;
-}
-#LinkedIn{
-    border-radius: 5px;
     text-decoration: none;
-    border: 2px solid #A1A4A6;
     color: #A1A4A6;
-    padding: 7px 14px;
-    font-size: 1.2em;
-    transition: all 0.5s ease-in-out;
+    border-radius: 5px;
+    font-family: "DM Serif Display", sans-serif;
+    transition: color 0.4s ease-in-out;
+    transition: background-color 0.4s ease-in-out;
 }
-#Twitter:hover{
+.links .link:hover{
+    color:#262626;
     background-color: #A1A4A6;
-    color: #262626;
 }
-#LinkedIn:hover{
-    background-color: #A1A4A6;
-    color: #262626;
-}
-.photo{
-    /* flex: 2; */
-    justify-self: center;
-    align-self: center;
-    /* display: flex; */
-}
-#myPic{
-    align-items: center;
-    height: 350px;
+.image img{
+    width: 320px;
+    height: 360px;
     border-radius: 50%;
+}
+@media screen and (width < 1196px){
+    .wrapperContent{
+        flex-direction: column;
+    }
+    .discription{
+        align-items: center;
+    }
+    .image{
+        display: none;
+    }
+}
+@media screen and (width < 789px){
+    .text{
+        width: 430px;
+    }
+}
+@media screen and (width < 611px){
+    .text{
+        width: 310px;
+        height: 650px;
+        justify-content: space-around;
+    }
+    #name{
+        font-size: 2.9em;
+    }
+    .discription{
+        font-size: 1em;
+        width: 300px;
+    }
 }

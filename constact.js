@@ -16,3 +16,14 @@ menu.addEventListener('mouseleave', event => {
         menu.classList.add("fadeOut")
     }
 })
+
+let form = document.getElementById("form");
+let submit = document.getElementById("submit");
+let nameInput = form.firstElementChild;
+
+submit.addEventListener('click', event => {
+    nameInput.value = "";
+    nameInput.nextElementSibling.value = "";
+    nameInput.nextElementSibling.nextElementSibling.value = ""
+    nameInput.nextElementSibling.nextElementSibling.nextElementSibling.value = ""
+});

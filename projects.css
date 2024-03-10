@@ -48,8 +48,9 @@ html, body{
     align-self: flex-start;
     margin-left: 5%;
 }
-#portfolio{
-    font-size: 2.1em;
+#portfolio a{
+    text-decoration: none;
+    font-size: 1.1em;
     letter-spacing: 0.04cm;
     font-family: "DM Serif Display", sans-serif;
     color: #F2F2F2;
