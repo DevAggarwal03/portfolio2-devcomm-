@@ -1,0 +1,241 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100vh;
+    width: 100vw;
+}
+.megaCanvas{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #BABDBF;
+    border: 10px solid #262626;
+    backdrop-filter: blur(2px);
+    box-shadow: 2px 2px 2px #484848 inset;
+}
+.container{
+    height: 95%;
+    width: 95%;
+    background-color: #262626;
+    border: 7px solid #262626;
+    box-shadow: 2px 2px 4px #262626;
+    background: radial-gradient();
+    background-image: url(./icons/background\ test.svg);
+    background-repeat: no-repeat;
+    background-size: 95% 90%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.container header{
+    position: relative;
+}
+.container #navbar{
+    display: flex;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    justify-content: space-between;
+    overflow: hidden;
+    background-color: #A1A4A6;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.container #navbar .logo{
+    align-self: flex-start;
+    margin-left: 5%;
+}
+#portfolio{
+    font-size: 2.1em;
+    letter-spacing: 0.04cm;
+    font-family: "DM Serif Display", sans-serif;
+    color: #F2F2F2;
+    font-weight: bold;
+}
+#portfolio span{
+    color: #262626;
+}
+.fadeIn{
+    animation: fadeIn 0.5s ease-in-out;
+}
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+        right: -20px;
+    }
+    100%{
+        opacity: 1;
+        right: 0;
+    }
+}
+.hamburger{
+    padding: 3px 0;
+    align-self: center;
+    margin-right: 5%;
+    align-self: center;
+}
+.hamburger:hover{
+    opacity: 0.5;
+}
+#menu{
+    position: absolute;
+    right: 0%;
+    align-items: center;
+    padding: 13px 7px;
+    border-radius: 20px;
+    background-color: #BABDBF;
+    width: 15%;
+}
+#menu li{
+    padding: 10px 0;
+    padding-left: 16px;
+    margin-right: 5%;
+    list-style: none;
+    font-size: 1.7em;
+    text-decoration: none;
+}
+@media screen and (width <= 1167px){
+    #menu{
+        padding: 6px 0;
+        width: 120px;
+    }
+    #menu li{
+        padding: 6px 0;
+        padding-left: 10px;
+        font-size: 1.3em;
+    }
+}
+#home{
+    color: #262626;
+    text-decoration: none;
+}
+#projects{
+    text-decoration: none;
+    color: #262626;
+}
+#contactMe{
+    color: #262626;
+}
+.hidden{
+    display: none;
+}
+.show{
+    display: inline;
+}
+.content{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 85%;
+    overflow-y: scroll;
+}
+.heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.heading h1{
+    font-size: 6em;
+    font-family: "DM Serif Display", sans-serif;
+    color: #BABDBF;
+}
+.heading h3{
+    color: #A1A4A6;
+    font-size: 1.3em;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+    width: 600px;
+}
+#name{
+    border-radius: 7px;
+    height: 40px;
+    font-size: 1.2em;
+    padding: 10px;
+    font-family: "DM Serif Display", sans-serif;
+}
+#email{
+    font-size: 1.2em;
+    padding: 10px;
+    height: 40px;
+    border-radius: 7px;
+    font-family: "DM Serif Display", sans-serif;
+}
+#subject{
+    font-size: 1.2em;
+    padding: 10px;
+    height: 40px;
+    border-radius: 7px;
+    font-family: "DM Serif Display", sans-serif;
+}
+#query{
+    font-size: 1.2em;
+    padding: 10px;
+    border-radius: 7px;
+    font-family: "DM Serif Display", sans-serif;
+}
+#submit{
+    width: 100px;
+    font-size: 1.2em;
+    font-family: "DM Serif Display", sans-serif;
+    font-weight: bold;
+    border-radius: 7px;
+    align-self: flex-end;
+}
+#submit:hover{
+    background-color: #A1A4A6;
+    color: #ededed;
+}
+#submit:active{
+    background-color: hsla(204, 3%, 64%, 0.85);
+}
+.acc{
+    display: flex;
+    width: 200px;
+    justify-content: space-around;
+}
+.acc img{
+    width: 40px;
+}
+@media screen and (width < 670px){
+    .heading h1{
+        font-size: 4em;
+    }
+    .form{
+        width: 350px;
+        height: 460px;
+    }
+    #query{
+        height: 240px;
+    }
+}
+@media screen and (width < 416px){
+    .heading h1{
+        font-size: 3em;
+    }
+    .heading h3{
+        font-size: 1em;
+    }
+    .form{
+        width: 250px;
+    }
+    #query{
+        height: 280px;
+    }
+}
+@media screen and (height < 796px){
+    .form{
+        margin-top: 18px;
+    }
+   .acc{
+        margin-top: 18px;
+   }
+}
